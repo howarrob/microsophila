@@ -24,10 +24,10 @@ fi
 
 output_path="$MICROSOPHILA_STORAGE_PATH/$accession_name/sra"
 
-$MICROSOPHILA_INSTALL_PATH/sratoolkit/bin/prefetch $accession_name -O $output_path
+'$MICROSOPHILA_INSTALL_PATH/sratoolkit/bin/prefetch" $accession_name -O "$output_path"
 
 # check prefetch's exit status to confirm that download was successful
 if [[ $? -ne 0 ]]; then
   echo "*!*!* prefetch returned non-zero exit code. Considering task unsuccessful. *!*!*"
-  rmdir $output_path || echo "Couldn't clean up ${output_path}, please help me!"
+  rmdir "$output_path" || echo "Couldn't clean up ${output_path}, please help me!"
 fi
