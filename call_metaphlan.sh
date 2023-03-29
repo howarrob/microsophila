@@ -43,7 +43,7 @@ fi
                                 --bowtie2out "$accession_path/metaphlan/bowtie2_output.bz2" \
                                 --nproc 16 \
                                 --input_type fastq \
-                                -o "$accession_path/profiled_microbiome.txt"
+                                -o "$accession_path/microbiome_profile.txt"
 
 # clean up if metaphlan fails
 exit_code=$?
