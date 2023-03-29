@@ -8,7 +8,7 @@
 # pass accession name as arg ...
 accession_name="$1"
 if [[ -z $1 ]]; then
-  accession_name="SRR1525774" # <<< or insert in string here
+  accession_name="SRR1525774" # <<< or hard-code name here
   read -p "No accession name was provided, would you like to use $accession_name as input? (y/n)" $yn
   [[ $yn -ne "y" ]] && exit 1
 fi
