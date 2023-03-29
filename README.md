@@ -14,3 +14,7 @@ Your home directory is a good place to set as the install path. If you want, the
 ### Step 2: run script "microsophila_install.sh"
 
 The install script checks that you have exported the variables from step 1 before proceeding to install sratools, bowtie2, and MetaPhlAn (as well as the respective dependencies of each).
+
+### Step 3: run script "create_dummy_accession.sh"
+
+To avoid having to generate real data, this script creates a child directory of $MICROSOPHILA_STORAGE_PATH to use for testing. So far, it contains some empty directories and a MetaPhlAn profile file.
