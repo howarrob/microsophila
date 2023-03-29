@@ -9,7 +9,7 @@
 accession_name="$1"
 if [[ -z $1 ]]; then
   accession_name="SRR1525774" # <<< or insert in string here
-  read -p "No accession name was provided, would you like to fasterq-dump $accession_name? (y/n)" $yn
+  read -p "No accession name was provided, would you like to use $accession_name as input? (y/n)" $yn
   [[ $yn -ne "y" ]] && exit 1
 fi
 
