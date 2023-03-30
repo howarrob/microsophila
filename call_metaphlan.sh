@@ -34,7 +34,7 @@ if [[ ! -d "$accession_path/metaphlan" ]]; then
 fi
 
 # activate metaphlan venv
-"$MICROSOPHILA_INSTALL_PATH/metaphlan_env/bin/activate"
+source "$MICROSOPHILA_INSTALL_PATH/metaphlan_env/bin/activate"
 
 # call metaphlan
 "$MICROSOPHILA_INSTALL_PATH/metaphlan_env/bin/metaphlan" "$microbiome_files" \
