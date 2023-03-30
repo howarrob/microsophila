@@ -27,15 +27,16 @@ if [[ ! -d "$output_path" ]]; then
 fi
 
 "$bowtie_bin_path/bowtie2" --threads 32 \
-                         -x "$MICROSOPHILA_STORAGE_PATH/ref/drosophila_index" \
+                         -x "$MICROSOPHILA_STORAGE_PATH/ref/d_melanogaster/bt2_index" \
                          -1 "$input_path/${accession_name}_1.fastq" \
                          -2 "$input_path/${accession_name}_2.fastq" \
                          -U "$input_path/${accession_name}.fastq" \
                          -S /dev/null \
                          --un-conc "$output_path/microbiome_reads.fastq" \
-                         --un "$output_path/microbiome_reads.fastq"
+                         --un "$output_path/microbiome_reads.fastq" \
+                         > "$output_path/alignment_stats.txt" # if run in SLURM, redirect doesn't work. Handled below.
 
 # if successful, copy bowtie2 output to output directory
-if [[ $? -eq 0 ]]; then
-  cp slurm-${SLURM_JOB_ID}.out "$output_path/bowtie2_output.txt"
+if [[ $? -eq 0 && -n $SLURM_JOB_ID ]]; then
+  cp slurm-${SLURM_JOB_ID}.out "$output_path/alignment_stats.txt"
 fi
