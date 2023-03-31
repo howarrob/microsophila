@@ -16,7 +16,7 @@ rm download
 
 # set up reference sequence
 mkdir "$MICROSOPHILA_STORAGE_PATH/ref"
-dm_ref_path="$MICROSOPHLIA_STORAGE_PATH/ref/d_melanogaster"
+dm_ref_path="$MICROSOPHILA_STORAGE_PATH/ref/d_melanogaster"
 mkdir "$dm_ref_path"
 
 # download
