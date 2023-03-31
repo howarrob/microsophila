@@ -15,7 +15,7 @@ mv $name_to_replace bowtie2
 rm download
 
 # set up reference sequence
-mkdir "$MICROSOPHLIA_STORAGE_PATH/ref"
+mkdir "$MICROSOPHILA_STORAGE_PATH/ref"
 dm_ref_path="$MICROSOPHLIA_STORAGE_PATH/ref/d_melanogaster"
 mkdir "$dm_ref_path"
 
