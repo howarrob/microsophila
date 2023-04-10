@@ -4,13 +4,13 @@
 
 ### Step 0: clone repo
 
-git clone https://github.com/adknaupp/microsophila.git
+git clone https://github.com/adknaupp/microsophila.git  
 *** note the directory where you cloned ***
 
 ### Step 1: set up environment variables
 Please add these lines to your bashrc:
 
-# this should be on a device with lots of space
+\# this should be on a device with lots of space
 export MICROSOPHILA_STORAGE_PATH="~/compute"
 export MICROSOPHILA_INSTALL_PATH="~"
 export PATH="$PATH:$MICROSOPHILA_INSTALL_PATH/bowtie2"
